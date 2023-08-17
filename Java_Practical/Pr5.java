@@ -4,11 +4,8 @@ import java.util.Scanner;
 
 public class Pr5 {
     //FIBONACCI SERIES
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
-        System.out.print("Enter the length");
+        System.out.print("Enter the length: ");
         Scanner in = new Scanner(System.in);
         int len = in.nextInt();
         System.out.print("Want to run recursively(r) or simple(s): ");
@@ -17,13 +14,15 @@ public class Pr5 {
         arr[0] = 1;
         arr[1] = 1;
         if (ans.equals("r")) {
-            Fib_Recur(len);
+            System.out.print(arr[0]+" ");
+            System.out.print(arr[1]+" ");
+            Fib_Recur(len-2);
         } else {
             Fibonacci(arr,len);
         }
         in.close();
     }
-
+    
     private static void Fibonacci(int arr[],int len) {
         for (int i = 2; i < len; i++) {
             arr[i] = arr[i-2]+arr[i-1];
@@ -32,8 +31,14 @@ public class Pr5 {
             System.out.print(i + " ");
         }
     }
-
-    private static int Fib_Recur(int len) {
-        return 0;
+    static int el1 = 1,el2 = 1;
+    private static void Fib_Recur(int len) {
+        if (len>0) {
+            int el3 = el1+el2;
+            System.out.print(el3+" ");
+            el1 = el2;
+            el2 = el3;
+            Fib_Recur(len-1);
+        } 
     }
 }
