@@ -9,7 +9,7 @@ public class Pr7 {
     public static void bank() {
         Scanner input = new Scanner(System.in);
         String ans2 = "y";
-        while (ans2=="y") {
+        while (ans2.equals("y")) {
             System.out.println("-----WELCOME TO THE BANK-----");
             System.out.println("\n"+"---MENU---");
             System.out.println("1.Deposit the money in the bank");
