@@ -1,7 +1,7 @@
 package Java_Practical;
 
 import java.util.Scanner;
-
+//TRANSPOSE OF MATRIX
 public class Pr9 {
     static void showMatrix(int matrix[][],int rows,int cols){
         for (int i = 0; i < rows; i++) {
