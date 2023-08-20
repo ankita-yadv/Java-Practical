@@ -13,9 +13,9 @@ public class Pr14 {
     }
 
     private static void prime(int n) {
-        for (int i = 1; i < n+1; i++) {
+        for (int i = 2; i < n+1; i++) {
             Boolean flag = true;
-            for (int j = 2; j < i/2; j++) {
+            for (int j = 2; j <= i/2; j++) {
                 if (i%j==0) {
                    flag = false; 
                    break;
