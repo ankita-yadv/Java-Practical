@@ -3,17 +3,17 @@ package Java_Practical;
 import java.util.Scanner;
 //TRANSPOSE OF MATRIX
 public class Pr9 {
-    static void showMatrix(int matrix[][],int rows,int cols){
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+    static void showMatrix(int matrix[][]){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
                 System.out.print("\t" + matrix[i][j]);
             }
             System.out.println();
         }
     }
-    static void showTrans(int matrix[][],int rows,int cols){
-        for (int i = 0; i < cols; i++) {
-            for (int j = 0; j < rows; j++) {
+    static void showTrans(int matrix[][]){
+        for (int i = 0; i < matrix[0].length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 System.out.print("\t" + matrix[j][i]);
             }
             System.out.println();
@@ -37,10 +37,10 @@ public class Pr9 {
             }   
         }
         System.out.println("Given matrix is: ");
-        showMatrix(matrix,rows,cols);
+        showMatrix(matrix);
 
         System.out.println("Transpose of matrix is: ");
-        showTrans(matrix,rows,cols);
+        showTrans(matrix);
 
         input.close();
     }
